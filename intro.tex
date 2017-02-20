@@ -1,0 +1,17 @@
+\section{Introduction}
+Functional encryption has become quite popular in last few years because it provides the system administrator with fine-grained control over the decryption capabilities of its users. Two important examples of functional encryption are $attirbute-based\ encryption(\ABE)$[......] and $predicate\ encryption(\PE)$[......]. 
+In (key-police)$\ABE$ and $\PE$ systems, each ciphertext $c$ is associated with an attribute $a$ and each secret key $s$ is associated with predicate $f$. A user holding the key $s$ can decrypt $c$ if and only if $f(a)=1$. 
+The difference between the two types of systems is in amount of information revealed: an $\ABE$ system reveals the attribute associated with each ciphertext, while a $\PE$ system keeps the attribute hidden.\
+
+The most expressive $\PE$ scheme is that of Katz, Sahai, and Waters[KSW08......], which is a $\PE$ scheme that supports the inner-product predicate: attributes $a$ and predicates $f$ are expressed as vectors $\overrightarrow{v}_{a}$ and $\overrightarrow{w}_{f}$. 
+We say $f(a)=1$ if and only if $\langle \overrightarrow{v}_{a}, \overrightarrow{w}_{f} \rangle=0$. They also showed that inner product predicates can support conjunction, subset and range queries on encrypted date[......] as well as disjunctions, polynomial evaluation, and $\mat{CNF}$ and $\mat{DNF}$ formulas[......].\
+
+In recent years, there were a number of IPE schemes[KSW08, OT09, LOS$^{+}$10, OT10, AL10, Par11, OT11, OT12] have been proposed, the security of these schemes is based on composite-number or prime order groups. 
+while assumption such as these can often be shown to hold in a suitable generic group model, to obtain more confidence in security, we would like to build IPE scheme based on computational problems such as lattice-based hardness problems, whose complexity is better understood.\
+
+Agrawal, Freeman, and Vaikuntanathan[AFV11] proposed the first IPE scheme based on the LWE assumption, and Xagawa[Xag13] improved the efficiency of [AFV11]'s scheme. 
+While the scheme of [Xag13] has public parameters of size $O(l n^{2}\lg^{2}q)$ and ciphertexts of size $O(l n\lg^{2}q)$, where $l$ is the length of predicate vector, $n$ is the security parameter, and $q$ is the modulus. which still makes the scheme impractical.
+
+\subsection{Our Contributions}
+
+\subsection{Related Work} 
